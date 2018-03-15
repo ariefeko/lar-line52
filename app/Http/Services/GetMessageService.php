@@ -28,7 +28,7 @@ class GetMessageService
 
         if ($response->isSucceeded()) {
             logger("reply success!!");
-            return "yes, success";
+            return;
         }
     }
 }
