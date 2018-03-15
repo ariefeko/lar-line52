@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use App\Http\Requests\GetMessageRequest;
 use App\Http\Services\GetMessageService;
 
-class GetMessageController
+class GetMessageController extends Controller
 {
     /**
      * @var GetMessageService
      */
     private $messageService;
-    
+
     /**
      * GetMessageController constructor.
      * @param GetMessageService $messageService
@@ -20,10 +20,11 @@ class GetMessageController
     {
         $this->messageService = $messageService;
     }
-    
+
     public function getMessage(GetMessageRequest $request)
     {
         //logger("request : ", $request->all());
+        // dd($request);
         $this->messageService->replySend($request->json()->all());
     }
 }
