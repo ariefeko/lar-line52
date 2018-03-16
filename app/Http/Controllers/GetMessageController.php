@@ -7,15 +7,8 @@ use App\Http\Services\GetMessageService;
 
 class GetMessageController extends Controller
 {
-    /**
-     * @var GetMessageService
-     */
     private $messageService;
 
-    /**
-     * GetMessageController constructor.
-     * @param GetMessageService $messageService
-     */
     public function __construct(GetMessageService $messageService)
     {
         $this->messageService = $messageService;
@@ -23,8 +16,8 @@ class GetMessageController extends Controller
 
     public function getMessage(GetMessageRequest $request)
     {
-        //logger("request : ", $request->all());
-        // dd($request);
-        $this->messageService->replySend($request->json()->all());
+        $data = buttonTemplate();//dd(json_decode(json_encode($data)));
+        $this->messageService->replySend(json_decode(json_encode($data)));
+        // $this->messageService->replySend($request->json()->all());
     }
 }
