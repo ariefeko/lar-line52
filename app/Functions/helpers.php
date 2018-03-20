@@ -36,8 +36,8 @@ function buttonObj() {
                 ]
             ]
         ];
-
-    return $data;
+        // dd(json_encode($data));
+    return json_encode($data);
 }
 
 function confirmObj() {
