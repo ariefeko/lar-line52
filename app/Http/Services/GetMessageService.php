@@ -27,9 +27,9 @@ class GetMessageService
         $response = $this->bot->replyMessage($replyToken, 'hello!');
 
         if ($response->isSucceeded()) {
-            return $response;
+            return;
         }
 
-        return "Verify Failed.";
+        // return "Verify Failed.";
     }
 }
