@@ -20,8 +20,8 @@ class GetMessageService
     {
         // dd($formData);
         $replyToken = $formData['events']['0']['replyToken'];
-        dd($replyToken);
         $this->client = new CurlHTTPClient(env('LINE_BOT_ACCESS_TOKEN'));
+        dd($replyToken);
         $this->bot = new LINEBot($this->client, ['channelSecret' => env('LINE_BOT_SECRET')]);
 
         $response = $this->bot->replyMessage($replyToken, 'hello!');
