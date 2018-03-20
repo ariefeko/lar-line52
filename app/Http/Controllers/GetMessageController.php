@@ -16,8 +16,9 @@ class GetMessageController extends Controller
 
     public function getMessage(GetMessageRequest $request)
     {
-        $data = buttonTemplate();//dd(json_decode(json_encode($data)));
-        $this->messageService->replySend(json_decode(json_encode($data)));
-        // $this->messageService->replySend($request->json()->all());
+        // dd($request->json());
+        // $data = json_decode(json_encode(buttonObj()));//dd(button());
+        // $this->messageService->replySend($data);
+        $this->messageService->replySend($request->json()->all());
     }
 }
