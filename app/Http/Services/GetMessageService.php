@@ -18,7 +18,7 @@ class GetMessageService
 
     public function replySend($formData)
     {
-        dd($formData);
+        // dd($formData);
         $replyToken = $formData['events']['0']['replyToken'];
         // dd($replyToken);
         $this->client = new CurlHTTPClient(env('LINE_BOT_ACCESS_TOKEN'));
