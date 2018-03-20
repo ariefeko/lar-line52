@@ -36,7 +36,7 @@ function buttonObj() {
                 ]
             ]
         ];
-        // dd(json_encode($data));
+
     return json_encode($data);
 }
 
@@ -62,7 +62,7 @@ function confirmObj() {
         ]
     ];
 
-    return $data;
+    return json_encode($data);
 }
 
 function carouselObj() {
@@ -134,7 +134,7 @@ function carouselObj() {
         ]
     ];
 
-    return $data;
+    return json_encode($data);
 }
 
 function imageObj() {
@@ -172,7 +172,7 @@ function imageObj() {
         ]
     ];
 
-    return $data;
+    return json_encode($data);
 }
 
 function btnTemplate()

@@ -18,16 +18,15 @@ class GetMessageService
 
     public function replySend($formData)
     {
-        $data = json_decode(json_encode(buttonObj()));//dd($data);
+        $data = json_decode(json_encode(buttonObj()));
 
-        // dd($formData);
         $replyToken = $formData['events']['0']['replyToken'];
         $this->client = new CurlHTTPClient(env('LINE_BOT_ACCESS_TOKEN'));
         $this->bot = new LINEBot($this->client, ['channelSecret' => env('LINE_BOT_SECRET')]);
-        $response = $this->bot->replyMessage($replyToken, buttonObj());
-        // dd($response);
+        $response = $this->bot->replyText($replyToken, "Hello!");
 
         if ($response->isSucceeded()) {
+            logger($replyToken);
             return $response;
         }
 
