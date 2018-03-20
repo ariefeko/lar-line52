@@ -28,7 +28,7 @@ class GetMessageService
         // dd($response);
 
         if ($response->isSucceeded()) {
-            return;
+            return $response;
         }
 
         // return "Verify Failed.";
