@@ -2,7 +2,8 @@
 if (!function_exists('hash_equals')) {
     defined('USE_MB_STRING') or define('USE_MB_STRING', function_exists('mb_strlen'));
 
-    function hash_equals($knownString, $userString) {
+    function hash_equals($knownString, $userString)
+    {
         $strlen = function ($string) {
             if (USE_MB_STRING) {
                 return mb_strlen($string, '8bit');
@@ -20,13 +21,16 @@ if (!function_exists('hash_equals')) {
     }
 }
 
-class LINEBotTiny {
-    public function __construct($channelAccessToken, $channelSecret) {
+class LINEBotTiny
+{
+    public function __construct($channelAccessToken, $channelSecret)
+    {
         $this->channelAccessToken = $channelAccessToken;
         $this->channelSecret = $channelSecret;
     }
 
-    public function parseEvents() {
+    public function parseEvents()
+    {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             http_response_code(405);
             error_log("Method not allowed");
@@ -38,12 +42,13 @@ class LINEBotTiny {
             error_log("Missing request body");
             exit();
         }
-        if (!hash_equals($this->sign($entityBody), $_SERVER['HTTP_X_LINE_SIGNATURE'])) {
-            http_response_code(400);
-            error_log("Invalid signature value");
-            exit();
-        }
-        $data = json_decode($entityBody, true);
+        // dd($entityBody);
+        // if (!hash_equals($this->sign($entityBody), $_SERVER['HTTP_X_LINE_SIGNATURE'])) {
+        //     http_response_code(400);
+        //     error_log("Invalid signature value");
+        //     exit();
+        // }
+        $data = json_decode($entityBody, true);//dd($data);
         if (!isset($data['events'])) {
             http_response_code(400);
             error_log("Invalid request body: missing events property");
@@ -52,7 +57,8 @@ class LINEBotTiny {
         return $data['events'];
     }
 
-    public function replyMessage($message) {
+    public function replyMessage($message)
+    {
         $header = array(
             "Content-Type: application/json",
             'Authorization: Bearer ' . $this->channelAccessToken,
@@ -67,23 +73,26 @@ class LINEBotTiny {
         $response = exec_url('https://api.line.me/v2/bot/message/reply',$this->channelAccessToken,json_encode($message));
     }
 
-    public function pushMessage($message) {
+    public function pushMessage($message)
+    {
         $response = exec_url('https://api.line.me/v2/bot/message/push',$this->channelAccessToken,json_encode($message));
-
     }
 
-    public function profil($userId) {
+    public function profil($userId)
+    {
         return json_decode(exec_get('https://api.line.me/v2/bot/profile/'.$userId,$this->channelAccessToken));
-
     }
-    private function sign($body) {
+
+    private function sign($body)
+    {
         $hash = hash_hmac('sha256', $body, $this->channelSecret, true);
         $signature = base64_encode($hash);
         return $signature;
     }
 }
 
-function exec_get($fullurl,$channelAccessToken) {
+function exec_get($fullurl,$channelAccessToken)
+{
     $header = array(
         "Content-Type: application/json",
         'Authorization: Bearer '.$channelAccessToken,
@@ -104,7 +113,8 @@ function exec_get($fullurl,$channelAccessToken) {
     return($returned);
 }
 
-function exec_url($fullurl,$channelAccessToken,$message) {
+function exec_url($fullurl,$channelAccessToken,$message)
+{
     $header = array(
         "Content-Type: application/json",
         'Authorization: Bearer '.$channelAccessToken,
@@ -127,7 +137,8 @@ function exec_url($fullurl,$channelAccessToken,$message) {
     return($returned);
 }
 
-function exec_url_aja($fullurl) {
+function exec_url_aja($fullurl)
+{
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_VERBOSE, 1);

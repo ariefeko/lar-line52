@@ -2,7 +2,7 @@
 // require_once('./line_class.php');
 $channelAccessToken = env('LINE_BOT_ACCESS_TOKEN'); //sesuaikan
 $channelSecret = env('LINE_BOT_SECRET');//sesuaikan
-$client = new LINE\LINEBot($channelAccessToken, $channelSecret);
+$client = new LINEBotTiny($channelAccessToken, $channelSecret);
 dd($client);
 //var_dump($client->parseEvents());
 //$_SESSION['userId']=$client->parseEvents()[0]['source']['userId'];
