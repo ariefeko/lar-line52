@@ -104,7 +104,7 @@ function carouselObj()
                   ]
                 ],
                 [
-                    "thumbnailImageUrl" => "https://blog.twitter.com/content/dam/blog-twitter/official/en_us/products/2017/rethinking-our-default-profile-photo/Avatar-Blog2-Round1.png.img.fullhd.medium.png",
+                    "thumbnailImageUrl" => "https://www.spar3d.com/wp-content/uploads/2013/10/creaform_logo.png",
                     "imageBackgroundColor" => "#000000",
                     "title" => "this is menu",
                     "text" => "description",

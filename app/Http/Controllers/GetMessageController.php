@@ -36,7 +36,7 @@ class GetMessageController extends Controller
         // $balas = array(
         //             'replyToken' => $replyToken,
         //             'messages' => [
-        //                 imageObj()
+        //                 carouselObj()
         //                 // array(
         //                 //     'type' => 'text',
         //                 //     'text' => 'Fungsi PHP base64_encode medantechno.com :'. base64_encode("medantechno.com")
@@ -78,7 +78,7 @@ class GetMessageController extends Controller
                     ]
                 ];
             } else if($pesan_datang=='3') {
-                $balas = array(
+                $balas = [
                     'replyToken' => $replyToken,
                     'messages' => [
                         carouselObj()
@@ -87,7 +87,7 @@ class GetMessageController extends Controller
                         //     'text' => 'Fungsi PHP base64_encode medantechno.com :'. base64_encode("medantechno.com")
                         // )
                     ]
-                );
+                ];
             } else if($pesan_datang=='4') {
                 $balas = array(
                     'replyToken' => $replyToken,
@@ -98,7 +98,7 @@ class GetMessageController extends Controller
                         )
                     )
                 );
-            } else if($pesan_datang=='6') {
+            } else if($pesan_datang=='5') {
                 $balas = array(
                     'replyToken' => $replyToken,
                     'messages' => array(
