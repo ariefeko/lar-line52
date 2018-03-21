@@ -33,40 +33,6 @@ class GetMessageController extends Controller
         $profil = $client->profil($userId);
         $pesan_datang = $message['text'];
 
-
-
-        // $get_sub = array();
-        // $aa = array(
-        //     'type' => 'image',
-        //     'originalContentUrl' => 'https://medantechno.com/line/images/bolt/1000.jpg',
-        //     'previewImageUrl' => 'https://medantechno.com/line/images/bolt/240.jpg'
-        // );
-        // array_push($get_sub,$aa);
-        // $get_sub[] = array(
-        //     'type' => 'text',
-        //     'text' => 'Halo, Anda memilih menu 2, harusnya gambar muncul.'
-        // );
-
-        // $balas = array(
-        //     'replyToken'    => $replyToken,
-        //     'messages'      => $get_sub
-        // );
-        // dd($balas);
-
-        // dd(json_decode(buttonObj()));
-
-        // $balas = [
-        //             'replyToken' => $replyToken,
-        //             'messages' => [
-        //                 buttonObj()
-        //                 // [
-        //                 //     'type' => 'text',
-        //                 //     'text' => 'Halo '.$profil->displayName.', Anda haha hihi memilih menu 1,'
-        //                 // ]
-        //             ]
-        //         ];
-        //         dd($balas);
-
         //pesan bergambar
         if($message['type']=='text') {
             if($pesan_datang=='1') {
@@ -74,29 +40,31 @@ class GetMessageController extends Controller
                     'replyToken' => $replyToken,
                     'messages' => [
                         buttonObj()
-                        // [
-                        //     'type' => 'text',
-                        //     'text' => 'Halo '.$profil->displayName.', Anda haha hihi memilih menu 1,'
-                        // ]
                     ]
                 ];
             } else if($pesan_datang=='2') {
-                $get_sub = array();
-                $aa = array(
-                    'type' => 'image',
-                    'originalContentUrl' => 'https://medantechno.com/line/images/bolt/1000.jpg',
-                    'previewImageUrl' => 'https://medantechno.com/line/images/bolt/240.jpg'
-                );
-                array_push($get_sub,$aa);
-                $get_sub[] = array(
-                    'type' => 'text',
-                    'text' => 'Halo '.$profil->displayName.', Anda memilih menu 2, harusnya gambar muncul.'
-                );
+                // $get_sub = array();
+                // $aa = array(
+                //     'type' => 'image',
+                //     'originalContentUrl' => 'https://medantechno.com/line/images/bolt/1000.jpg',
+                //     'previewImageUrl' => 'https://medantechno.com/line/images/bolt/240.jpg'
+                // );
+                // array_push($get_sub,$aa);
+                // $get_sub[] = array(
+                //     'type' => 'text',
+                //     'text' => 'Halo '.$profil->displayName.', Anda memilih menu 2, harusnya gambar muncul.'
+                // );
 
-                $balas = array(
-                    'replyToken'    => $replyToken,
-                    'messages'      => $get_sub
-                );
+                // $balas = array(
+                //     'replyToken'    => $replyToken,
+                //     'messages'      => $get_sub
+                // );
+                $balas = [
+                    'replyToken' => $replyToken,
+                    'messages' => [
+                        confirmObj()
+                    ]
+                ];
             } else if($pesan_datang=='3') {
                 $balas = array(
                     'replyToken' => $replyToken,

@@ -3,7 +3,7 @@
 function buttonObj() {
     $data = [
             "type" => "template",
-            "altText" => "This is a buttons template",
+            "altText" => "Ini button template",
             "template" => [
                 "type" => "buttons",
                 "thumbnailImageUrl" => "https://blog.twitter.com/content/dam/blog-twitter/official/en_us/products/2017/rethinking-our-default-profile-photo/Avatar-Blog2-Round1.png.img.fullhd.medium.png",
@@ -46,23 +46,23 @@ function confirmObj() {
         "altText" => "this is a confirm template",
         "template" => [
             "type" => "confirm",
-            "text" => "Are you sure?",
+            "text" => "Apa Anda yakin?",
             "actions" => [
                 [
                     "type" => "message",
-                    "label" => "Yes",
+                    "label" => "Ya",
                     "text" => "yes"
                 ],
                 [
                     "type" => "message",
-                    "label" => "No",
+                    "label" => "Tidak",
                     "text" => "no"
                 ]
             ]
         ]
     ];
 
-    return json_encode($data);
+    return $data;
 }
 
 function carouselObj() {
@@ -134,7 +134,7 @@ function carouselObj() {
         ]
     ];
 
-    return json_encode($data);
+    return $data;
 }
 
 function imageObj() {
@@ -172,7 +172,7 @@ function imageObj() {
         ]
     ];
 
-    return json_encode($data);
+    return $data;
 }
 
 function btnTemplate()
