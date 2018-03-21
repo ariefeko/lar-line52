@@ -104,7 +104,7 @@ function carouselObj()
                   ]
                 ],
                 [
-                    "thumbnailImageUrl" => "http://www.okflood.org/wp-content/uploads/2014/06/Dummy_company__Sample_logo_PSD_by_SolidSilver-150x150.jpg",
+                    "thumbnailImageUrl" => "https://www.elegantthemes.com/blog/wp-content/uploads/2017/07/wordpress-lorem-ipsum.png",
                     "imageBackgroundColor" => "#000000",
                     "title" => "this is menu",
                     "text" => "description",
