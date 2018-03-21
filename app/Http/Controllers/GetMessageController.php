@@ -16,36 +16,15 @@ class GetMessageController extends Controller
 
     public function getMessage(GetMessageRequest $request)
     {
-        // dd($request->json());
-        // $data = json_decode(json_encode(buttonObj()));//dd(button());
-        // $this->messageService->replySend($data);
         $this->messageService->replySend($request->json()->all());
     }
 
-    public function bot()
+    public function botEngine()
     {
-        $channelAccessToken = env('LINE_BOT_ACCESS_TOKEN'); //sesuaikan
-        $channelSecret = env('LINE_BOT_SECRET');//sesuaikan
+        $channelAccessToken = env('LINE_BOT_ACCESS_TOKEN');
+        $channelSecret = env('LINE_BOT_SECRET');
         $client = new \LINEBotTiny($channelAccessToken, $channelSecret);
-        // dd($client);
-        //var_dump($client->parseEvents());
-        //$_SESSION['userId']=$client->parseEvents()[0]['source']['userId'];
-        /*
-        {
-          "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
-          "type": "message",
-          "timestamp": 1462629479859,
-          "source": {
-            "type": "user",
-            "userId": "U206d25c2ea6bd87c17655609a1c37cb8"
-          },
-          "message": {
-            "id": "325708",
-            "type": "text",
-            "text": "Hello, world"
-          }
-        }
-        */
+        dd($client);
         $userId     = $client->parseEvents()[0]['source']['userId'];
         $replyToken = $client->parseEvents()[0]['replyToken'];
         $timestamp  = $client->parseEvents()[0]['timestamp'];
@@ -53,7 +32,7 @@ class GetMessageController extends Controller
         $messageid  = $client->parseEvents()[0]['message']['id'];
         $profil = $client->profil($userId);
         $pesan_datang = $message['text'];
-        // dd($pesan_datang);
+
         //pesan bergambar
         if($message['type']=='text') {
             if($pesan_datang=='1') {
@@ -83,18 +62,6 @@ class GetMessageController extends Controller
                     'replyToken'    => $replyToken,
                     'messages'      => $get_sub
                 );
-                /*
-                $alt = array(
-                    'replyToken' => $replyToken,
-                    'messages' => array(
-                        array(
-                                'type' => 'text',
-                                'text' => 'Anda memilih menu 2, harusnya gambar muncul.'
-                            )
-                    )
-                );
-                */
-                //$client->replyMessage($alt);
             } else if($pesan_datang=='3') {
                 $balas = array(
                     'replyToken' => $replyToken,

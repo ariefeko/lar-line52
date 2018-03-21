@@ -4,24 +4,7 @@ $channelAccessToken = env('LINE_BOT_ACCESS_TOKEN'); //sesuaikan
 $channelSecret = env('LINE_BOT_SECRET');//sesuaikan
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 dd($client);
-//var_dump($client->parseEvents());
-//$_SESSION['userId']=$client->parseEvents()[0]['source']['userId'];
-/*
-{
-  "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
-  "type": "message",
-  "timestamp": 1462629479859,
-  "source": {
-    "type": "user",
-    "userId": "U206d25c2ea6bd87c17655609a1c37cb8"
-  },
-  "message": {
-    "id": "325708",
-    "type": "text",
-    "text": "Hello, world"
-  }
-}
-*/
+
 $userId     = $client->parseEvents()[0]['source']['userId'];
 $replyToken = $client->parseEvents()[0]['replyToken'];
 $timestamp  = $client->parseEvents()[0]['timestamp'];

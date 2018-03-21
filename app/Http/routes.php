@@ -12,5 +12,5 @@ Route::group(array('prefix' => 'api'), function () {
     });
 
     // Route::post('/', ['as' => 'line.bot.message', 'uses' => 'GetMessageController@getMessage']);
-    Route::post('/', ['as' => 'line.bot.message', 'uses' => 'GetMessageController@bot']);
+    Route::post('/', ['as' => 'line.bot.message', 'uses' => 'GetMessageController@botEngine']);
 });
