@@ -40,6 +40,10 @@ class GetMessageController extends Controller
                     'replyToken' => $replyToken,
                     'messages' => [
                         buttonObj();
+                        // [
+                        //     'type' => 'text',
+                        //     'text' => 'Halo '.$profil->displayName.', Anda haha hihi memilih menu 1,'
+                        // ]
                     ]
                 ];
             } else if($pesan_datang=='2') {
