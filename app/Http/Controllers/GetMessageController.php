@@ -24,12 +24,12 @@ class GetMessageController extends Controller
         $channelAccessToken = env('LINE_BOT_ACCESS_TOKEN');
         $channelSecret = env('LINE_BOT_SECRET');
         $client = new \LINEBotTiny($channelAccessToken, $channelSecret);
-        dd($client);
-        $userId     = $client->parseEvents()[0]['source']['userId'];
+
+        $userId = $client->parseEvents()[0]['source']['userId'];
         $replyToken = $client->parseEvents()[0]['replyToken'];
-        $timestamp  = $client->parseEvents()[0]['timestamp'];
-        $message    = $client->parseEvents()[0]['message'];
-        $messageid  = $client->parseEvents()[0]['message']['id'];
+        $timestamp = $client->parseEvents()[0]['timestamp'];
+        $message = $client->parseEvents()[0]['message'];
+        $messageid = $client->parseEvents()[0]['message']['id'];
         $profil = $client->profil($userId);
         $pesan_datang = $message['text'];
 
