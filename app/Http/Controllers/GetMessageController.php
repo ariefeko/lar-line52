@@ -33,12 +33,16 @@ class GetMessageController extends Controller
         $profil = $client->profil($userId);
         $pesan_datang = $message['text'];
 
-        // $balas = [
+        // $balas = array(
         //             'replyToken' => $replyToken,
         //             'messages' => [
-        //                 confirmObj()
+        //                 imageObj()
+        //                 // array(
+        //                 //     'type' => 'text',
+        //                 //     'text' => 'Fungsi PHP base64_encode medantechno.com :'. base64_encode("medantechno.com")
+        //                 // )
         //             ]
-        //         ];
+        //         );
         // dd($balas);
 
         //pesan bergambar
@@ -76,12 +80,13 @@ class GetMessageController extends Controller
             } else if($pesan_datang=='3') {
                 $balas = array(
                     'replyToken' => $replyToken,
-                    'messages' => array(
-                        array(
-                            'type' => 'text',
-                            'text' => 'Fungsi PHP base64_encode medantechno.com :'. base64_encode("medantechno.com")
-                        )
-                    )
+                    'messages' => [
+                        imageObj()
+                        // array(
+                        //     'type' => 'text',
+                        //     'text' => 'Fungsi PHP base64_encode medantechno.com :'. base64_encode("medantechno.com")
+                        // )
+                    ]
                 );
             } else if($pesan_datang=='4') {
                 $balas = array(
@@ -134,7 +139,7 @@ class GetMessageController extends Controller
                     'messages' => array(
                         array(
                             'type' => 'text',
-                            'text' => 'Halo.. Selamat datang di medantechno.com .        Untuk testing menu pilih 1,2,3,4,5 ... atau stiker'
+                            'text' => 'Halo, untuk testing menu silahkan pilih 1,2,3,4,5,6'
                         )
                     )
                 );
