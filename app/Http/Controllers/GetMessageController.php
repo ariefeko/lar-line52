@@ -39,11 +39,11 @@ class GetMessageController extends Controller
                 $balas = [
                     'replyToken' => $replyToken,
                     'messages' => [
-                        buttonObj();
-                        // [
-                        //     'type' => 'text',
-                        //     'text' => 'Halo '.$profil->displayName.', Anda haha hihi memilih menu 1,'
-                        // ]
+                        // buttonObj();
+                        [
+                            'type' => 'text',
+                            'text' => 'Halo '.$profil->displayName.', Anda haha hihi memilih menu 1,'
+                        ]
                     ]
                 ];
             } else if($pesan_datang=='2') {
