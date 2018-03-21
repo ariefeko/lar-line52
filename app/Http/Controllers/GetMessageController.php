@@ -36,7 +36,7 @@ class GetMessageController extends Controller
         //pesan bergambar
         if($message['type']=='text') {
             if($pesan_datang=='1') {
-                $balas = array(
+                $balas = [
                     'replyToken' => $replyToken,
                     'messages' => array(
                         array(
@@ -44,7 +44,7 @@ class GetMessageController extends Controller
                             'text' => 'Halo '.$profil->displayName.', Anda memilih menu 1,'
                         )
                     )
-                );
+                ];
             } else if($pesan_datang=='2') {
                 $get_sub = array();
                 $aa = array(
