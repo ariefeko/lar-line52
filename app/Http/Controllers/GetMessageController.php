@@ -39,10 +39,7 @@ class GetMessageController extends Controller
                 $balas = [
                     'replyToken' => $replyToken,
                     'messages' => [
-                        [
-                            'type' => 'text',
-                            'text' => 'Halo '.$profil->displayName.', Anda haha hihi memilih menu 1,'
-                        ]
+                        buttonObj();
                     ]
                 ];
             } else if($pesan_datang=='2') {
