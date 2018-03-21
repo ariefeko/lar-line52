@@ -157,7 +157,7 @@ function imageObj()
                     ]
                 ],
                 [
-                    "imageUrl" => "http://www.okflood.org/wp-content/uploads/2014/06/Dummy_company__Sample_logo_PSD_by_SolidSilver-150x150.jpg",
+                    "imageUrl" => "https://blog.twitter.com/content/dam/blog-twitter/official/en_us/products/2017/rethinking-our-default-profile-photo/Avatar-Blog2-Round1.png.img.fullhd.medium.png",
                     "action" => [
                         "type" => "message",
                         "label" => "Yes",
