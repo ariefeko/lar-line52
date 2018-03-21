@@ -91,12 +91,13 @@ class GetMessageController extends Controller
             } else if($pesan_datang=='4') {
                 $balas = array(
                     'replyToken' => $replyToken,
-                    'messages' => array(
-                        array(
-                            'type' => 'text',
-                            'text' => 'Jam Server Saya : '. date('Y-m-d H:i:s')
-                        )
-                    )
+                    'messages' => [
+                        imageObj()
+                        // array(
+                        //     'type' => 'text',
+                        //     'text' => 'Jam Server Saya : '. date('Y-m-d H:i:s')
+                        // )
+                    ]
                 );
             } else if($pesan_datang=='5') {
                 $balas = array(
@@ -111,7 +112,7 @@ class GetMessageController extends Controller
                         )
                     )
                 );
-            } else if($pesan_datang=='7') {
+            } else if($pesan_datang=='6') {
                 $balas = array(
                     'replyToken' => $replyToken,
                     'messages' => array(
@@ -127,7 +128,7 @@ class GetMessageController extends Controller
                     'messages' => array(
                         array(
                             'type' => 'text',
-                            'text' => 'Pesan ini dari medantechno.com'
+                            'text' => 'Pesan ini dari storabot.com'
                         )
                     )
                 );
@@ -139,7 +140,7 @@ class GetMessageController extends Controller
                     'messages' => array(
                         array(
                             'type' => 'text',
-                            'text' => 'Halo, untuk testing menu silahkan pilih 1,2,3,4,5,6'
+                            'text' => 'Halo, untuk testing menu silahkan pilih 1,2,3,4,5,6...'
                         )
                     )
                 );
