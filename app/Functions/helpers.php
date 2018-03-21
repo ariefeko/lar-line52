@@ -76,7 +76,7 @@ function carouselObj()
             "type" => "carousel",
             "columns" => [
                 [
-                  "thumbnailImageUrl" => "https://example.com/bot/images/item1.jpg",
+                  "thumbnailImageUrl" => "https://blog.twitter.com/content/dam/blog-twitter/official/en_us/products/2017/rethinking-our-default-profile-photo/Avatar-Blog2-Round1.png.img.fullhd.medium.png",
                   "imageBackgroundColor" => "#FFFFFF",
                   "title" => "this is menu",
                   "text" => "description",
@@ -104,7 +104,7 @@ function carouselObj()
                   ]
                 ],
                 [
-                    "thumbnailImageUrl" => "https://example.com/bot/images/item2.jpg",
+                    "thumbnailImageUrl" => "https://blog.twitter.com/content/dam/blog-twitter/official/en_us/products/2017/rethinking-our-default-profile-photo/Avatar-Blog2-Round1.png.img.fullhd.medium.png",
                     "imageBackgroundColor" => "#000000",
                     "title" => "this is menu",
                     "text" => "description",
@@ -157,7 +157,7 @@ function imageObj()
                     ]
                 ],
                 [
-                    "imageUrl" => "https://blog.twitter.com/content/dam/blog-twitter/official/en_us/products/2017/rethinking-our-default-profile-photo/Avatar-Blog2-Round1.png.img.fullhd.medium.png",
+                    "imageUrl" => "https://example.com/bot/images/item2.jpg",
                     "action" => [
                         "type" => "message",
                         "label" => "Yes",
@@ -165,7 +165,7 @@ function imageObj()
                     ]
                 ],
                 [
-                    "imageUrl" => "https://www.spar3d.com/wp-content/uploads/2013/10/creaform_logo.png",
+                    "imageUrl" => "https://example.com/bot/images/item3.jpg",
                     "action" => [
                         "type" => "uri",
                         "label" => "View detail",

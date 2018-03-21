@@ -81,7 +81,7 @@ class GetMessageController extends Controller
                 $balas = array(
                     'replyToken' => $replyToken,
                     'messages' => [
-                        imageObj()
+                        carouselObj()
                         // array(
                         //     'type' => 'text',
                         //     'text' => 'Fungsi PHP base64_encode medantechno.com :'. base64_encode("medantechno.com")
