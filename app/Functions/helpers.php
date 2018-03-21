@@ -104,7 +104,7 @@ function carouselObj()
                   ]
                 ],
                 [
-                    "thumbnailImageUrl" => "https://www.spar3d.com/wp-content/uploads/2013/10/creaform_logo.png",
+                    "thumbnailImageUrl" => "http://www.okflood.org/wp-content/uploads/2014/06/Dummy_company__Sample_logo_PSD_by_SolidSilver-150x150.jpg",
                     "imageBackgroundColor" => "#000000",
                     "title" => "this is menu",
                     "text" => "description",
