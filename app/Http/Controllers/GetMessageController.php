@@ -55,17 +55,17 @@ class GetMessageController extends Controller
 
         // dd(json_decode(buttonObj()));
 
-        $balas = [
-                    'replyToken' => $replyToken,
-                    'messages' => [
-                        buttonObj()
-                        // [
-                        //     'type' => 'text',
-                        //     'text' => 'Halo '.$profil->displayName.', Anda haha hihi memilih menu 1,'
-                        // ]
-                    ]
-                ];
-                dd($balas);
+        // $balas = [
+        //             'replyToken' => $replyToken,
+        //             'messages' => [
+        //                 buttonObj()
+        //                 // [
+        //                 //     'type' => 'text',
+        //                 //     'text' => 'Halo '.$profil->displayName.', Anda haha hihi memilih menu 1,'
+        //                 // ]
+        //             ]
+        //         ];
+        //         dd($balas);
 
         //pesan bergambar
         if($message['type']=='text') {
