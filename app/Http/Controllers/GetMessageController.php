@@ -128,7 +128,7 @@ class GetMessageController extends Controller
                     'messages' => array(
                         array(
                             'type' => 'text',
-                            'text' => 'Pesan ini dari storabot.com'
+                            'text' => 'Pesan ini dari https:\\storabot.com'
                         )
                     )
                 );
