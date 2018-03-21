@@ -149,7 +149,7 @@ function imageObj()
             "type" => "image_carousel",
             "columns" => [
                 [
-                    "imageUrl" => "hhttps://www.elegantthemes.com/blog/wp-content/uploads/2017/07/wordpress-lorem-ipsum.png",
+                    "imageUrl" => "https://www.elegantthemes.com/blog/wp-content/uploads/2017/07/wordpress-lorem-ipsum.png",
                     "action" => [
                         "type" => "postback",
                         "label" => "Buy",
