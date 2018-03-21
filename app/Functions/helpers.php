@@ -149,7 +149,7 @@ function imageObj()
             "type" => "image_carousel",
             "columns" => [
                 [
-                    "imageUrl" => "https://example.com/bot/images/item1.jpg",
+                    "imageUrl" => "hhttps://www.elegantthemes.com/blog/wp-content/uploads/2017/07/wordpress-lorem-ipsum.png",
                     "action" => [
                         "type" => "postback",
                         "label" => "Buy",
@@ -157,7 +157,7 @@ function imageObj()
                     ]
                 ],
                 [
-                    "imageUrl" => "https://example.com/bot/images/item2.jpg",
+                    "imageUrl" => "http://www.okflood.org/wp-content/uploads/2014/06/Dummy_company__Sample_logo_PSD_by_SolidSilver-150x150.jpg",
                     "action" => [
                         "type" => "message",
                         "label" => "Yes",
@@ -165,7 +165,7 @@ function imageObj()
                     ]
                 ],
                 [
-                    "imageUrl" => "https://example.com/bot/images/item3.jpg",
+                    "imageUrl" => "https://www.spar3d.com/wp-content/uploads/2013/10/creaform_logo.png",
                     "action" => [
                         "type" => "uri",
                         "label" => "View detail",
