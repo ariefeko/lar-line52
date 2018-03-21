@@ -1,6 +1,7 @@
 <?php
 
-function buttonObj() {
+function buttonObj()
+{
     $data = [
             "type" => "template",
             "altText" => "Ini button template",
@@ -40,8 +41,9 @@ function buttonObj() {
     return $data;
 }
 
-function confirmObj() {
-    [
+function confirmObj()
+{
+    $data = [
         "type" => "template",
         "altText" => "this is a confirm template",
         "template" => [
@@ -65,8 +67,9 @@ function confirmObj() {
     return $data;
 }
 
-function carouselObj() {
-    [
+function carouselObj()
+{
+    $data = [
         "type" => "template",
         "altText" => "this is a carousel template",
         "template" => [
@@ -137,7 +140,8 @@ function carouselObj() {
     return $data;
 }
 
-function imageObj() {
+function imageObj()
+{
     $data = [
         "type" => "template",
         "altText" => "this is a image carousel template",

@@ -33,6 +33,14 @@ class GetMessageController extends Controller
         $profil = $client->profil($userId);
         $pesan_datang = $message['text'];
 
+        // $balas = [
+        //             'replyToken' => $replyToken,
+        //             'messages' => [
+        //                 confirmObj()
+        //             ]
+        //         ];
+        // dd($balas);
+
         //pesan bergambar
         if($message['type']=='text') {
             if($pesan_datang=='1') {
