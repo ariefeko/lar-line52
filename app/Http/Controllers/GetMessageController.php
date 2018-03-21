@@ -33,17 +33,39 @@ class GetMessageController extends Controller
         $profil = $client->profil($userId);
         $pesan_datang = $message['text'];
 
+
+
+        // $get_sub = array();
+        // $aa = array(
+        //     'type' => 'image',
+        //     'originalContentUrl' => 'https://medantechno.com/line/images/bolt/1000.jpg',
+        //     'previewImageUrl' => 'https://medantechno.com/line/images/bolt/240.jpg'
+        // );
+        // array_push($get_sub,$aa);
+        // $get_sub[] = array(
+        //     'type' => 'text',
+        //     'text' => 'Halo, Anda memilih menu 2, harusnya gambar muncul.'
+        // );
+
+        // $balas = array(
+        //     'replyToken'    => $replyToken,
+        //     'messages'      => $get_sub
+        // );
+        // dd($balas);
+
+        // dd(buttonObj());
+
         //pesan bergambar
         if($message['type']=='text') {
             if($pesan_datang=='1') {
                 $balas = [
                     'replyToken' => $replyToken,
                     'messages' => [
-                        // buttonObj();
-                        [
-                            'type' => 'text',
-                            'text' => 'Halo '.$profil->displayName.', Anda haha hihi memilih menu 1,'
-                        ]
+                        json_decode(buttonObj());
+                        // [
+                        //     'type' => 'text',
+                        //     'text' => 'Halo '.$profil->displayName.', Anda haha hihi memilih menu 1,'
+                        // ]
                     ]
                 ];
             } else if($pesan_datang=='2') {
