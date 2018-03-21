@@ -179,10 +179,10 @@ function imageObj()
     return $data;
 }
 
-function btnTemplate()
-{
-    $client = new GuzzleHttp\Client(['headers' => ['Content-Type'  => 'application/json','Authorization' => 'Bearer ' . env('LINE_BOT_ACCESS_TOKEN')]]);
-    $res = $client->request('POST', env('LINE_MESSAGE') . '/reply', ['replyToken' => $replyToken,'body' => json_encode(buttonObj())]);
+// function btnTemplate()
+// {
+//     $client = new GuzzleHttp\Client(['headers' => ['Content-Type'  => 'application/json','Authorization' => 'Bearer ' . env('LINE_BOT_ACCESS_TOKEN')]]);
+//     $res = $client->request('POST', env('LINE_MESSAGE') . '/reply', ['replyToken' => $replyToken,'body' => json_encode(buttonObj())]);
 
-    return json_decode($res->getBody()->getContents());
-}
+//     return json_decode($res->getBody()->getContents());
+// }
