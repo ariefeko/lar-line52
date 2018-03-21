@@ -157,7 +157,7 @@ function imageObj()
                     ]
                 ],
                 [
-                    "imageUrl" => "https://example.com/bot/images/item2.jpg",
+                    "imageUrl" => "https://blog.twitter.com/content/dam/blog-twitter/official/en_us/products/2017/rethinking-our-default-profile-photo/Avatar-Blog2-Round1.png.img.fullhd.medium.png",
                     "action" => [
                         "type" => "message",
                         "label" => "Yes",
@@ -165,7 +165,7 @@ function imageObj()
                     ]
                 ],
                 [
-                    "imageUrl" => "https://example.com/bot/images/item3.jpg",
+                    "imageUrl" => "https://images-na.ssl-images-amazon.com/images/I/41KOtlUihtL.jpg",
                     "action" => [
                         "type" => "uri",
                         "label" => "View detail",
