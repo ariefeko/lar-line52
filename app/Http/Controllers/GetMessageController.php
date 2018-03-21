@@ -38,12 +38,12 @@ class GetMessageController extends Controller
             if($pesan_datang=='1') {
                 $balas = [
                     'replyToken' => $replyToken,
-                    'messages' => array(
-                        array(
+                    'messages' => [
+                        [
                             'type' => 'text',
-                            'text' => 'Halo '.$profil->displayName.', Anda memilih menu 1,'
-                        )
-                    )
+                            'text' => 'Halo '.$profil->displayName.', Anda haha hihi memilih menu 1,'
+                        ]
+                    ]
                 ];
             } else if($pesan_datang=='2') {
                 $get_sub = array();
