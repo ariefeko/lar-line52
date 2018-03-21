@@ -53,7 +53,7 @@ class GetMessageController extends Controller
         // );
         // dd($balas);
 
-        dd(json_decode(buttonObj()));
+        // dd(json_decode(buttonObj()));
 
         //pesan bergambar
         if($message['type']=='text') {
