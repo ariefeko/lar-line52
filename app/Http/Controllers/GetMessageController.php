@@ -33,18 +33,6 @@ class GetMessageController extends Controller
         $profil = $client->profil($userId);
         $pesan_datang = $message['text'];
 
-        // $balas = array(
-        //             'replyToken' => $replyToken,
-        //             'messages' => [
-        //                 carouselObj()
-        //                 // array(
-        //                 //     'type' => 'text',
-        //                 //     'text' => 'Fungsi PHP base64_encode medantechno.com :'. base64_encode("medantechno.com")
-        //                 // )
-        //             ]
-        //         );
-        // dd($balas);
-
         //pesan bergambar
         if($message['type']=='text') {
             if($pesan_datang=='1') {
@@ -82,10 +70,6 @@ class GetMessageController extends Controller
                     'replyToken' => $replyToken,
                     'messages' => [
                         carouselObj()
-                        // array(
-                        //     'type' => 'text',
-                        //     'text' => 'Fungsi PHP base64_encode medantechno.com :'. base64_encode("medantechno.com")
-                        // )
                     ]
                 ];
             } else if($pesan_datang=='4') {
@@ -93,10 +77,6 @@ class GetMessageController extends Controller
                     'replyToken' => $replyToken,
                     'messages' => [
                         imageObj()
-                        // array(
-                        //     'type' => 'text',
-                        //     'text' => 'Jam Server Saya : '. date('Y-m-d H:i:s')
-                        // )
                     ]
                 );
             } else if($pesan_datang=='5') {
@@ -128,7 +108,7 @@ class GetMessageController extends Controller
                     'messages' => array(
                         array(
                             'type' => 'text',
-                            'text' => 'Pesan ini dari https:\\storabot.com'
+                            'text' => 'Pesan ini dari Storabot'
                         )
                     )
                 );
@@ -158,7 +138,7 @@ class GetMessageController extends Controller
         }
 
         $result =  json_encode($balas);
-        //$result = ob_get_clean();
+
         file_put_contents('./balasan.json',$result);
         $client->replyMessage($balas);
     }
