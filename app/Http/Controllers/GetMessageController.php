@@ -43,19 +43,19 @@ class GetMessageController extends Controller
                     ]
                 ];
             } else if($pesan_datang=='2') {
-                // $get_sub = array();
-                // $aa = array(
+                // $get_sub = [);
+                // $aa = [
                 //     'type' => 'image',
                 //     'originalContentUrl' => 'https://medantechno.com/line/images/bolt/1000.jpg',
                 //     'previewImageUrl' => 'https://medantechno.com/line/images/bolt/240.jpg'
                 // );
                 // array_push($get_sub,$aa);
-                // $get_sub[] = array(
+                // $get_sub[] = [
                 //     'type' => 'text',
                 //     'text' => 'Halo '.$profil->displayName.', Anda memilih menu 2, harusnya gambar muncul.'
                 // );
 
-                // $balas = array(
+                // $balas = [
                 //     'replyToken'    => $replyToken,
                 //     'messages'      => $get_sub
                 // );
@@ -73,68 +73,78 @@ class GetMessageController extends Controller
                     ]
                 ];
             } else if($pesan_datang=='4') {
-                $balas = array(
+                $balas = [
                     'replyToken' => $replyToken,
                     'messages' => [
                         imageObj()
                     ]
-                );
+                ];
             } else if($pesan_datang=='5') {
-                $balas = array(
+                $balas = [
                     'replyToken' => $replyToken,
-                    'messages' => array(
-                        array(
+                    'messages' => [
+                        [
                             'type' => 'location',
                             'title' => 'Lokasi Saya.. Klik Detail',
                             'address' => 'Medan',
                             'latitude' => '3.521892',
                             'longitude' => '98.623596'
-                        )
-                    )
-                );
+                        ]
+                    ]
+                ];
             } else if($pesan_datang=='6') {
-                $balas = array(
+                $balas = [
                     'replyToken' => $replyToken,
-                    'messages' => array(
-                        array(
+                    'messages' => [
+                        [
                             'type' => 'text',
                             'text' => 'Testing PUSH pesan ke anda'
-                        )
-                    )
-                );
+                        ]
+                    ]
+                ];
 
-                $push = array(
+                $push = [
                     'to' => $userId,
-                    'messages' => array(
-                        array(
+                    'messages' => [
+                        [
                             'type' => 'text',
-                            'text' => 'Pesan ini dari Storabot'
-                        )
-                    )
-                );
+                            'text' => 'Pesan ini dari Storabot News'
+                        ]
+                    ]
+                ];
 
                 $client->pushMessage($push);
-            } else {
-                $balas = array(
+            } else if($pesan_datang=='7') {
+                $balas = [
                     'replyToken' => $replyToken,
-                    'messages' => array(
-                        array(
+                    'messages' => [
+                        [
+                            'type' => 'text',
+                            'text' => 'Anda memilih menu 7, silahkan pilih sub-menu a,b'
+                        ]
+                    ]
+                ];
+            } else {
+                $balas = [
+                    'replyToken' => $replyToken,
+                    'messages' => [
+                        [
                             'type' => 'text',
                             'text' => 'Halo, untuk testing menu silahkan pilih 1,2,3,4,5,6...'
-                        )
-                    )
-                );
+                        ]
+                    ]
+                ];
             }
-        }else if($message['type']=='sticker') {
-            $balas = array(
+        } else if($message['type']=='sticker') {
+            $balas = [
                 'replyToken' => $replyToken,
-                'messages' => array(
-                    array(
+                'messages' => [
+                    [
                         'type' => 'text',
                         'text' => 'Terimakasih stikernya... '
-                    )
-                )
-            );
+                    ]
+                ]
+            ];
         }
 
         $result =  json_encode($balas);
