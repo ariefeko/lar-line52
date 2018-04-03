@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
-    return view('info');
+    return view('welcome');
 });
 
 Route::group(array('prefix' => 'api'), function () {

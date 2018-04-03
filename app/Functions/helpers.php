@@ -186,88 +186,88 @@ function richmenu()
     // -H 'Content-Type:application/json' \
     // -d \
     $data = [
-        "size":[
-            "width":2500,
-            "height":1686
+        "size" => [
+            "width" => 2500,
+            "height" => 1686
         ],
-        "selected":false,
-        "name":"Controller",
-        "chatBarText":"Controller",
-        "areas":[
+        "selected" => false,
+        "name" => "Controller",
+        "chatBarText" => "Controller",
+        "areas" => [
             [
-              "bounds":[
-                  "x":551,
-                  "y":325,
-                  "width":321,
-                  "height":321
+              "bounds" => [
+                  "x" => 551,
+                  "y" => 325,
+                  "width" => 321,
+                  "height" => 321
               ],
-                "action":[
-                    "type":"message",
-                    "text":"up"
+                "action" => [
+                    "type" => "message",
+                    "text" => "up"
                 ]
             ],
             [
-                "bounds":[
-                    "x":876,
-                    "y":651,
-                    "width":321,
-                    "height":321
+                "bounds" => [
+                    "x" => 876,
+                    "y" => 651,
+                    "width" => 321,
+                    "height" => 321
                 ],
-              "action":[
-                  "type":"message",
-                  "text":"right"
-              ]
-            ],
-            [
-                "bounds":[
-                    "x":551,
-                    "y":972,
-                    "width":321,
-                    "height":321
-                ],
-                "action":[
-                    "type":"message",
-                    "text":"down"
+                "action" => [
+                    "type" => "message",
+                    "text" => "right"
                 ]
             ],
             [
-                "bounds":[
-                    "x":225,
-                    "y":651,
-                    "width":321,
-                    "height":321
+                "bounds" => [
+                    "x" => 551,
+                    "y" => 972,
+                    "width" => 321,
+                    "height" => 321
                 ],
-                "action":[
-                    "type":"message",
-                    "text":"left"
+                "action" => [
+                    "type" => "message",
+                    "text" => "down"
                 ]
             ],
             [
-                "bounds":[
-                    "x":1433,
-                    "y":657,
-                    "width":367,
-                    "height":367
+                "bounds" => [
+                    "x" => 225,
+                    "y" => 651,
+                    "width" => 321,
+                    "height" => 321
                 ],
-                "action":[
-                    "type":"message",
-                    "text":"btn b"
+                "action" => [
+                    "type" => "message",
+                    "text" => "left"
                 ]
             ],
             [
-                "bounds":[
-                    "x":1907,
-                    "y":657,
-                    "width":367,
-                    "height":367
+                "bounds" => [
+                    "x" => 1433,
+                    "y" => 657,
+                    "width" => 367,
+                    "height" => 367
                 ],
-                "action":[
-                    "type":"message",
-                    "text":"btn a"
+                "action" => [
+                    "type" => "message",
+                    "text" => "btn b"
+                ]
+            ],
+            [
+                "bounds" => [
+                    "x" => 1907,
+                    "y" => 657,
+                    "width" => 367,
+                    "height" => 367
+                ],
+                "action" => [
+                    "type" => "message",
+                    "text" => "btn a"
                 ]
             ]
         ]
-    ]
+    ];
 
     return $data;
 }
