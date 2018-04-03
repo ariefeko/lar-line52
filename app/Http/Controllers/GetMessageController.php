@@ -108,7 +108,7 @@ class GetMessageController extends Controller
                     'messages' => [
                         [
                             'type' => 'text',
-                            'text' => 'Pesan ini dari Storabot News'
+                            'text' => 'Pesan ini dari https://storabot.com/login'
                         ]
                     ]
                 ];
@@ -122,6 +122,13 @@ class GetMessageController extends Controller
                             'type' => 'text',
                             'text' => 'Anda memilih menu 7, silahkan pilih sub-menu a,b'
                         ]
+                    ]
+                ];
+            } else if($pesan_datang=='rich') {
+                $balas = [
+                    'replyToken' => $replyToken,
+                    'messages' => [
+                        richmenu()
                     ]
                 ];
             } else {
